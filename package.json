@@ -1,0 +1,26 @@
+{
+  "name": "chapter_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Exercise_1.js",
+  "scripts": {
+    "dbr": "yarn sequelize db:drop && yarn sequelize db:create && yarn sequelize db:migrate && yarn sequelize db:seed:all",
+    "stop": "node Exercise_1.js",
+    "start": "node Exercise_1.js",
+    "dev": "nodemon Exercise_1.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "nodemon": "^3.0.3",
+    "pg": "^8.11.3",
+    "sequelize": "^6.37.1"
+  },
+  "devDependencies": {
+    "@types/sequelize": "^4.28.20",
+    "sequelize-cli": "^6.6.2"
+  }
+}

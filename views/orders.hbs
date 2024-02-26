@@ -1,0 +1,23 @@
+<h4>Создать заказ</h4>
+
+
+<div class="input-field col s12">
+    <select id="waiterSelect">
+        <option value="" disabled selected>Укажите сотрудника</option>
+        {{#each waiters}}
+            <option value="{{this.id}}">{{this.name}}</option>
+        {{/each}}
+    </select>
+</div>
+
+<div class="input-field col s12">
+    <select multiple id="menuItemsSelect">
+        <option value="" disabled selected>Выберите блюдо из списка</option>
+        {{#each menuItems}}
+            <option value="{{this.id}}" data-icon="/images/{{picture}}">{{title}}</option>
+        {{/each}}
+    </select>
+</div>
+
+<button class="btn waves-effect waves-light" type="button" id="orderCreatButton">Создать заказ</button>
+<button class="btn red waves-effect waves-light" type="button" id="orderResetButton">Сбросить</button>

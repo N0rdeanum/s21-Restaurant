@@ -1,0 +1,36 @@
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo right">chapter_1</a>
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+
+            {{#if isHome}}
+                <li class="active"><a href="/">Главная Страница</a></li>
+            {{else}}
+                <li><a href="/">Главная Страница</a></li>
+            {{/if}}
+
+            {{#if isOrders}}
+                <li class="active"><a href="/orders">Заказы</a></li>
+            {{else}}
+                <li><a href="/orders">Заказы</a></li>
+            {{/if}}
+
+            <li><a href="/order">Информация о заказе</a></li>
+
+            {{#if isMenu}}
+                <li class="active"><a href="/menu">Меню</a></li>
+            {{else}}
+                <li><a href="/menu">Меню</a></li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="/">Главная Страница</a></li>
+    <li><a href="/orders">Заказы</a></li>
+    <li><a href="/order">Информация о заказе</a></li>
+    <li><a href="/menu">Меню</a></li>
+</ul>

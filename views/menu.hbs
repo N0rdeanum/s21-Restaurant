@@ -1,0 +1,31 @@
+<h4>{{title}}</h4>
+
+{{#if noMenu}}
+    <p>Извините, меню пусто.</p>
+{{else}}
+
+    <div class="grid-container">
+        {{#each menuItems}}
+            <div class="col s7">
+                <div class="card z-depth-4">
+                    <div class="card-image">
+                        <img src="/images/{{picture}}" alt="{{title}}">
+                    </div>
+                    <div class="card-content">
+                        <b><i>{{title}}</i></b>
+                        <hr>
+                        <p>{{description}}</p>
+                    </div>
+                    <div class="card-action">
+                        <p class="price"> {{cost}}</p>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+{{/if}}
+
+
+<script>
+    window.picture
+</script>

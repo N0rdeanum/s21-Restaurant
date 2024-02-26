@@ -1,0 +1,40 @@
+<!-- orderDetailsView.handlebars -->
+
+<h4>Введите ID заказа</h4>
+
+<form id="orderForm">
+    <label for="orderId">ID Заказа:</label>
+    <input type="text" id="orderId" name="id" required>
+    <button class="btn waves-effect waves-light" type="button" id="orderButton">Показать заказ</button>
+</form>
+
+<div id="orderFormContainer" style="display: none;">
+    <!-- Контейнер для отображения формы или других данных -->
+</div>
+
+<h4>Информация о заказе</h4>
+<div id="orderList" class="l">
+    <h2>Детали заказа</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>Наименование блюда</th>
+            <th>Изображение</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each order.MenuItems}}
+            <tr>
+                <td>{{title}}</td>
+                <td><img src="/images/{{picture}}" alt="{{title}}" style="max-width: 100px;"></td>
+            </tr>
+        {{/each}}
+
+        </tbody>
+    </table>
+
+    <p>Текущая стоимость заказа: {{total.price}} рублей</p>
+
+    <button id="closeOrderButton" class="btn waves-effect waves-light">Закрыть заказ</button>
+</div>
+<script src="/js/completedOrders.js"></script>

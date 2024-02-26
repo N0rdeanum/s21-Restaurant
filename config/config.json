@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "maks",
+    "password": null,
+    "database": "test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "maks",
+    "password": null,
+    "database": "prod",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "maks",
+    "password": null,
+    "database": "postgres",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
